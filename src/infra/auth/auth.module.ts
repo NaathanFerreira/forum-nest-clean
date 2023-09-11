@@ -4,6 +4,8 @@ import { PassportModule } from '@nestjs/passport'
 import { ConfigService } from '@nestjs/config'
 import { Env } from '../env'
 import { JwtStrategy } from './jwt.strategy'
+import { APP_GUARD } from '@nestjs/core'
+import { JwtAuthGuard } from './jwt-auth.guard'
 
 @Module({
   // auth libs
@@ -24,6 +26,12 @@ import { JwtStrategy } from './jwt.strategy'
     }),
   ],
   controllers: [],
-  providers: [JwtStrategy],
+  providers: [
+    JwtStrategy, // every route will be protected by jwt guard
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+  ],
 })
 export class AuthModule {}
