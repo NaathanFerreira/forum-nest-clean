@@ -30,7 +30,7 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "Second Question",
+  "title": "SecoThirdnd Question",
   "content": "question content"
 }
 
@@ -38,5 +38,12 @@ Authorization: Bearer {{authToken}}
 
 # @name fetch_questions
 GET {{baseUrl}}/questions?page=1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name get_question_by_slyg
+GET {{baseUrl}}/questions/secothirdnd-question
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
