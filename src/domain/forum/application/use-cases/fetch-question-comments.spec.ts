@@ -4,7 +4,6 @@ import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cas
 import { makeQuestionComment } from 'test/factories/make-question-comment'
 import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository'
 import { makeStudent } from 'test/factories/make-student'
-import { StudentsRepository } from '../repositories/students-repository'
 
 let inMemoryStudentsRepository: InMemoryStudentsRepository
 let inMemoryQuestionCommentsRepository: InMemoryQuestionCommentsRepository
